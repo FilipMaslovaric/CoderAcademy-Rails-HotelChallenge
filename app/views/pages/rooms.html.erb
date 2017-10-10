@@ -3,22 +3,16 @@
 
 <%= image_tag("http://g-cdn.apartmenttherapy.com/2701187/02tuborow_rect540.jpg") %>
 
-<h3> Hotel Room...ONE <h3>
-<p> Type: Tubular </p>
-<p> Size: Discrete </p>
-<p> Amenities: Concrete size bed </p>
+<% @rooms.each do |room| %>
+
+<hr>
+<h3>Title:</h3>
+<p><%= room.title %></p>
 <br>
-<h3> Hotel Room...TWO <h3>
-<p> Type: Tubular </p>
-<p> Size: Discrete </p>
-<p> Amenities: Concrete size bed </p>
+<h3>Description:</h3>
+<p><%= room.description %></p>
 <br>
-<h3> Hotel Room...THREE <h3>
-<p> Type: Tubular </p>
-<p> Size: Discrete </p>
-<p> Amenities: Concrete size bed </p>
-<br>
-<h3> Hotel Room...FOUR <h3>
-<p> Type: Tubular </p>
-<p> Size: Discrete </p>
-<p> Amenities: Concrete size bed </p>
+<h3>Price Per Night:</h3>
+<p>$<%= room.price_per_night %></p>
+
+<% end %>
