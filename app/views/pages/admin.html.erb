@@ -1,0 +1,11 @@
+<h4> Welcome...to... </h4>
+<h1> HOTEL ADMIN </h1>
+
+<% @enquiry.each do |enquiry| %>
+<hr>
+<p>Title: <%= enquiry.name %></p>
+<p>E-mail: <%= enquiry.email %></p>
+<p>Phone: <%= enquiry.phone %></p>
+<p>Message: <%= enquiry.message %></p>
+
+<% end %>
